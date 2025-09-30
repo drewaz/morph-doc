@@ -12,9 +12,9 @@ Developing on Morph is as straightforward as developing on Ethereum.
 To deploy contracts onto a MorphL2 chain, simply set the RPC endpoint of your target MorphL2 chain and deploy using your preferred Ethereum development framework:
 
 
-- [Hardhat](https://hardhat.org/)
+- [Hardhat](https://hardhat.org)
 - [Foundry](https://github.com/foundry-rs/foundry)
-- [Brownie](https://eth-brownie.readthedocs.io/en/stable/)
+- [Brownie](https://eth-brownie.readthedocs.io/en/stable)
 - [Alchemy](https://docs.alchemy.com/reference/alchemy-sdk-quickstart)
 - [QuickNode SDK](https://www.quicknode.com/docs/quicknode-sdk/getting-started?utm_source=morph-docs)
 
@@ -28,10 +28,10 @@ Before you start, ensure you are connected to the following networks:
 
 | Network Name | Morph Mainnet | Ethereum Mainnet |
 | --- | --- | --- |
-| RPC URL | https://rpc-quicknode.morphl2.io| https://ethereum-rpc.publicnode.com/ |
+| RPC URL | https://rpc-quicknode.morphl2.io| https://ethereum-rpc.publicnode.com |
 | Chain ID | 2818 | 1 |
 | Currency Symbol | ETH | ETH |
-| Block Explorer URL | https://explorer.morphl2.io/| https://etherscan.io/ |
+| Block Explorer URL | https://explorer.morphl2.io/| https://etherscan.io |
 
 :::tip Websocket Connection
 
@@ -93,22 +93,22 @@ const provider = new ethers.providers.JsonRpcProvider(
 
 
 
-# Holesky Testnet:
+# Hoodi Testnet:
 
 ## Step 1: Network Configuration
 
 Before you start, ensure you are connected to the following networks:
 
-| Network Name | Morph Holesky Testnet | Holesky Testnet |
+| Network Name | Morph Hoodi Testnet | Hoodi Testnet |
 | --- | --- | --- |
-| RPC URL | https://rpc-quicknode-holesky.morphl2.io| https://ethereum-holesky-rpc.publicnode.com/ |
-| Chain ID | 2810 | 17000 |
+| RPC URL | https://rpc-hoodi.morphl2.io| https://ethereum-hoodi-rpc.publicnode.com |
+| Chain ID | 2910 | 560048 |
 | Currency Symbol | ETH | ETH |
-| Block Explorer URL | https://explorer-holesky.morphl2.io/| https://holesky.etherscan.io/ |
+| Block Explorer URL | https://explorer-hoodi.morphl2.io| https://hoodi.etherscan.io |
 
 :::tip Websocket Connection
 
-wss://rpc-quicknode-holesky.morphl2.io
+wss://rpc-hoodi.morphl2.io
 
 :::
 
@@ -130,7 +130,7 @@ const config: HardhatUserConfig = {
   ...
   networks: {
     morphl2: {
-      url: 'https://rpc-quicknode-holesky.morphl2.io',
+      url: 'https://rpc-hoodi.morphl2.io',
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       gasprice = 2000000000
@@ -158,13 +158,13 @@ Setting up a Morph  provider in an ethers script:
 import { ethers } from 'ethers';
 
 const provider = new ethers.providers.JsonRpcProvider(
-  'https://rpc-quicknode-holesky.morphl2.io'
+  'https://rpc-hoodi.morphl2.io'
 );
 ```
 
 ## Step 3: Acquire Ether
 
-To start building on Morph, you may need some testnet ETH. Use a faucet to acquire holesky Ether, then [bridge](https://bridge-holesky.morphl2.io) the test Ethereum Ether to the Morph testnet.
+To start building on Morph, you may need some testnet ETH. Use a faucet to acquire Hoodi Ether, then [bridge](https://bridge-hoodi.morphl2.io/) the test Ethereum Ether to the Morph testnet.
 
 Each faucet has its own rules and requirements, so you may need to try a few before finding one that works for you.
 
@@ -174,7 +174,7 @@ https://stakely.io/en/faucet/ethereum-holesky-testnet-eth
 
 https://faucet.quicknode.com/ethereum/holesky
 
-https://holesky-faucet.pk910.de/
+https://hoodi-faucet.pk910.de
 
 https://cloud.google.com/application/web3/faucet/ethereum (needs a Google account)
 
